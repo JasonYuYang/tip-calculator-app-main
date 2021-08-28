@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header><img src="./images/logo.svg" alt="" /></header>
+    <div class="outter-wrapper">
+      <div class="main-card">
+        <div class="bill-wrapper">
+          <label for="bill">Bill</label>
+          <img class="dollar" src="./images/icon-dollar.svg" alt="" />
+          <input type="number" id="bill" placeholder="0" min="1" />
+        </div>
+        <div class="selecttip-wrapper">
+          <label id="selecttip">Select Tip %</label>
+          <form class="tipselection-wrapper">
+            <li class="tip tip1">
+              <input type="radio" name="tip" id="5" value="5" />
+              <label for="5">5%</label>
+            </li>
+            <li class="tip tip2">
+              <input type="radio" name="tip" id="10" value="10" />
+              <label for="10">10%</label>
+            </li>
+            <li class="tip tip3">
+              <input type="radio" name="tip" id="15" value="15" />
+              <label for="15">15%</label>
+            </li>
+            <li class="tip tip4">
+              <input type="radio" name="tip" id="20" value="20" />
+              <label for="20">20%</label>
+            </li>
+            <li class="tip tip5">
+              <input type="radio" id="25" name="tip" value="25" />
+              <label for="25">25%</label>
+            </li>
+            <li class="tip custom">
+              <input type="number" placeholder="Custom" />
+            </li>
+          </form>
+        </div>
+        <div class="people-wrapper">
+          <label for="people">Numper of people</label>
+          <img class="person" src="./images/icon-person.svg" alt="" />
+          <input type="number" id="people" placeholder="0" min="1" />
+        </div>
+      </div>
+      <form class="output-card">
+        <div>
+          <div class="output-wrapper">
+            <div class="output-label">
+              <span class="output-large">Tip Amount</span
+              ><span class="output-small">/ person</span>
+            </div>
+            <div class="output-value">
+              <span class="tip-person">$0.00</span>
+            </div>
+          </div>
+          <div class="output-wrapper">
+            <div class="output-label">
+              <span class="output-large">Total</span
+              ><span class="output-small">/ person</span>
+            </div>
+            <div class="output-value">
+              <span class="total-person">$0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="reset">RESET</button>
+      </form>
+    </div>
+
+    <!-- c     Custom Number of People Tip Amount / person
+    Total / person Reset -->
+    -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

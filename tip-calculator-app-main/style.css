@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-2: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-1: hsl(184, 14%, 56%);
+  --light-grayish-cyan-2: hsl(185, 41%, 84%);
+  --light-grayish-cyan-1: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: var(--light-grayish-cyan-2);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.outter-wrapper {
+  margin: 3rem auto 4rem auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 768px;
+  border-radius: 1rem;
+  background-color: var(--white);
+}
+.main-card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 1rem;
+  padding: 0.3rem;
+}
+.bill-wrapper {
+  display: felx;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bill-wrapper label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: inherit;
+  margin-bottom: 0.3rem;
+}
+.bill-wrapper input {
+  display: block;
+}
+.bill-wrapper img {
+  display: block;
+  position: absolute;
+  padding: 0.8rem 0.5rem;
+}
+input[type='number'] {
+  width: 100%;
+  text-align: right;
+  font-size: inherit;
+  font-family: inherit;
+  background: var(--light-grayish-cyan-1);
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: inherit;
+}
+input[type='number']:focus,
+input[type='number']:active {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px var(--strong-cyan);
+}
+.selecttip-wrapper #selecttip {
+  margin: 2em 0 0.8em 0;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: inherit;
+}
+.tipselection-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  width: 100%;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(2.8rem, 1fr));
+}
+.tipselection-wrapper .tip label {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tip {
+  position: relative;
+  list-style: none;
+}
+.tip input[type='radio'] {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  border-radius: 0.4rem;
+  background-color: var(--very-dark-cyan);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.tip input[type='radio']:checked {
+  background-color: var(--strong-cyan);
+}
+.tip input[type='radio']:checked ~ label {
+  color: var(--very-dark-cyan);
+}
+.tip input[type='radio']:hover {
+  background-color: var(--strong-cyan);
+}
+.tip input[type='radio']:hover ~ label {
+  color: var(--very-dark-cyan);
+}
+.tip input[type='radio']:focus {
+  outline: none;
+}
+
+.tip.custom input {
+  display: inline-block;
+  background: var(--light-grayish-cyan-1);
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+}
+
+.people-wrapper {
+  display: felx;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.people-wrapper label {
+  margin: 2em 0 0.3rem 0;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: inherit;
+}
+.people-wrapper input {
+  display: block;
+}
+.people-wrapper img {
+  display: block;
+  position: absolute;
+  padding: 0.8rem 0.5rem;
+}
+.output-card {
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--very-dark-cyan);
+}
+.output-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 1rem 1rem 1rem;
+}
+.output-label span {
+  display: block;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.output-label .output-small {
+  color: var(--light-grayish-cyan-2);
+  font-family: inherit;
+  font-size: 0.65rem;
+}
+.output-value {
+  display: flex;
+  align-items: center;
+}
+.output-value span {
+  font-family: inherit;
+  font-size: 2rem;
+  color: var(--strong-cyan);
+  font-weight: 700;
+}
+.reset {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: var(--strong-cyan);
+  border: none;
+  color: var(--very-dark-cyan);
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: var(--light-grayish-cyan-2);
+}
+/* For removing arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+/* prevent dragging of ghost image */
+img {
+  pointer-events: none !important;
+}
