@@ -14,9 +14,11 @@
   --light-grayish-cyan-1: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
 }
-body {
+body,
+html {
   font-family: 'Space Mono', monospace;
   background-color: var(--light-grayish-cyan-2);
+  min-height: 100vh;
 }
 
 header {
@@ -32,6 +34,7 @@ header {
   border-radius: 1rem;
   background-color: var(--white);
 }
+
 .main-card {
   display: flex;
   flex-direction: column;
@@ -227,4 +230,33 @@ input[type='number'] {
 /* prevent dragging of ghost image */
 img {
   pointer-events: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .outter-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  .main-card {
+    width: 100%;
+    margin: 0;
+  }
+  .output-card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .tipselection-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 2.8rem));
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.attribution a {
+  color: var(--strong-cyan);
 }
