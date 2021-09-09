@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -18,11 +19,11 @@
     <header><img src="./images/logo.svg" alt="" /></header>
     <div class="outter-wrapper">
       <div class="main-card">
-        <div class="bill-wrapper">
+        <form class="bill-wrapper">
           <label for="bill">Bill</label>
           <img class="dollar" src="./images/icon-dollar.svg" alt="" />
           <input type="number" id="bill" placeholder="0" min="1" />
-        </div>
+        </form>
         <div class="selecttip-wrapper">
           <label id="selecttip">Select Tip %</label>
           <form class="tipselection-wrapper">
@@ -47,15 +48,15 @@
               <label for="25">25%</label>
             </li>
             <li class="tip custom">
-              <input type="number" placeholder="Custom" />
+              <input type="number" placeholder="Custom" id="custom" />
             </li>
           </form>
         </div>
-        <div class="people-wrapper">
-          <label for="people">Numper of people</label>
+        <form class="people-wrapper">
+          <label for="people">Number of people</label>
           <img class="person" src="./images/icon-person.svg" alt="" />
           <input type="number" id="people" placeholder="0" min="1" />
-        </div>
+        </form>
       </div>
       <form class="output-card">
         <div>
