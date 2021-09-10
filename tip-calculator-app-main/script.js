@@ -8,7 +8,9 @@ const totalPerson = document.querySelector('.total-person');
 const tipPerson = document.querySelector('.tip-person');
 const inputCustomValue = document.querySelector('#custom');
 const inputRadioButtons = document.querySelectorAll('input[name="tip"]');
+const inputNumberOfPeople = document.querySelector('#people');
 const resetButton = document.querySelector('.reset');
+const errorText = document.querySelector('.error-text');
 
 function addGlobalListener(event, selector, cb) {
   document.addEventListener(event, (e) => {
@@ -22,7 +24,22 @@ function getBill(e) {
   inputBillValue = +e.target.value;
 }
 function getPeople(e) {
-  numberOfPeople = +e.target.value;
+  const regex = '^[1-9][0-9]*$';
+  const inputValid = new RegExp(regex, 'g');
+  if (e.target.value !== '') {
+    if (!inputValid.test(`${e.target.value}`)) {
+      inputNumberOfPeople.classList.add('error');
+      errorText.classList.add('show');
+    } else {
+      inputNumberOfPeople.classList.remove('error');
+      errorText.classList.remove('show');
+    }
+
+    numberOfPeople = +e.target.value;
+  } else {
+    inputNumberOfPeople.classList.remove('error');
+    errorText.classList.remove('show');
+  }
 }
 function setOutputCardValue() {
   if (numberOfPeople > 0) {

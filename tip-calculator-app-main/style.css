@@ -13,12 +13,14 @@
   --light-grayish-cyan-2: hsl(185, 41%, 84%);
   --light-grayish-cyan-1: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --error: red;
 }
 body,
 html {
   font-family: 'Space Mono', monospace;
   background-color: var(--light-grayish-cyan-2);
   min-height: 100vh;
+  font-weight: 500;
 }
 
 header {
@@ -141,6 +143,8 @@ input[type='number']:active {
   width: 100%;
   height: 100%;
   border-radius: 0.4rem;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
 }
 
 .people-wrapper {
@@ -158,6 +162,21 @@ input[type='number']:active {
 }
 .people-wrapper input {
   display: block;
+}
+.people-wrapper input.error {
+  box-shadow: 0px 0px 0px 2px var(--error);
+}
+.error-text {
+  color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 2em 0 0.3rem 0;
+  font-size: 0.8rem;
+  opacity: 0;
+}
+.error-text.show {
+  opacity: 1;
 }
 .people-wrapper img {
   display: block;
