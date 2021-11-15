@@ -131,5 +131,6 @@ module.exports = merge(common, {
   devtool: 'eval-source-map',
   cache: {
     type: 'filesystem', // 使用文件缓存
+    allowCollectingMemory: true,
   },
 });
