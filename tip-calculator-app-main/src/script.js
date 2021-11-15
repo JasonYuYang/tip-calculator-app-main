@@ -1,3 +1,5 @@
+import './style.css';
+
 let inputBillValue = 0;
 let inputTipRatio = 0;
 let numberOfPeople = 0;
@@ -13,7 +15,7 @@ const resetButton = document.querySelector('.reset');
 const errorText = document.querySelector('.error-text');
 
 function addGlobalListener(event, selector, cb) {
-  document.addEventListener(event, (e) => {
+  document.addEventListener(event, e => {
     if (e.target.matches(selector)) cb(e);
   });
 }
@@ -50,7 +52,7 @@ function setOutputCardValue() {
   }
 }
 
-addGlobalListener('click', "input[name='tip']", (e) => {
+addGlobalListener('click', "input[name='tip']", e => {
   inputTipRatio = +e.target.value * 0.01;
   inputCustomValue.value = '';
 });
@@ -62,14 +64,14 @@ addGlobalListener('change', '#people', getPeople);
 addGlobalListener('keyup', '#people', getPeople);
 inputCustomValue.addEventListener('focus', () => {
   inputTipRatio = 0;
-  inputRadioButtons.forEach((button) => {
+  inputRadioButtons.forEach(button => {
     button.checked = false;
   });
 });
 document.addEventListener('keyup', setOutputCardValue);
 document.addEventListener('click', setOutputCardValue);
 resetButton.addEventListener('click', () => {
-  document.querySelectorAll('form').forEach((form) => {
+  document.querySelectorAll('form').forEach(form => {
     form.reset();
   });
 });
