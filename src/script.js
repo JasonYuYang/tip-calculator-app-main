@@ -1,4 +1,5 @@
 import './style.css';
+import './index.html';
 
 let inputBillValue = 0;
 let inputTipRatio = 0;

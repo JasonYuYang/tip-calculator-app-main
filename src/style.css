@@ -21,15 +21,21 @@ html {
   background-color: var(--light-grayish-cyan-2);
   min-height: 100vh;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
+header img {
+  margin: 3rem auto;
 }
+
 .outter-wrapper {
-  margin: 3rem auto 4rem auto;
   display: flex;
   justify-content: space-between;
   max-width: 768px;

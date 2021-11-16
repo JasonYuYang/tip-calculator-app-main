@@ -10,7 +10,7 @@
   </head>
   <body>
     <header><img src="./images/logo.svg" alt="" /></header>
-    <div class="outter-wrapper">
+    <main class="outter-wrapper">
       <div class="main-card">
         <form class="bill-wrapper">
           <label for="bill">Bill</label>
@@ -19,7 +19,7 @@
         </form>
         <div class="selecttip-wrapper">
           <label id="selecttip">Select Tip %</label>
-          <form class="tipselection-wrapper">
+          <ul class="tipselection-wrapper">
             <li class="tip tip1">
               <input type="radio" name="tip" id="5" value="5" />
               <label for="5">5%</label>
@@ -43,7 +43,7 @@
             <li class="tip custom">
               <input type="number" placeholder="Custom" id="custom" />
             </li>
-          </form>
+          </ul>
         </div>
         <form class="people-wrapper">
           <label for="people">Number of people</label>
@@ -74,11 +74,6 @@
 
         <button class="reset">RESET</button>
       </form>
-    </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-      <a href="#">Yu Yang</a>.
-    </div>
+    </main>
   </body>
 </html>
